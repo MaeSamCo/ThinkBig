@@ -8,12 +8,8 @@ const PrettyButton = styled.button`
     height: 30px;
     border: 1px solid black;
 `
-const PrettyBoxButton = styled.button`
-    background-color: blue;
-    width: 100px;
-    height: 30px;
-    border: 1px solid black;
+
+const PB = styled.button`
+background-color:black;
 `
-
-
-export { PrettyButton, PrettyBoxButton }
+export {PrettyButton, PB}
