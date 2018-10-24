@@ -1,7 +1,15 @@
 import React, { Component } from 'react'
-
+import { ContextHOC } from '../context/ContextMain'
 
 class TestPage extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    componentDidMount() {
+        this.props.actions.showValue()
+    }
+
     render() {
         return (
             <div id="test-page">
@@ -11,4 +19,4 @@ class TestPage extends Component {
     }
 }
 
-export default TestPage
+export default ContextHOC(TestPage)
