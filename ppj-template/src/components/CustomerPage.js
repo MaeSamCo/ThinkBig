@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './CustomerPage.css'
 import { Z_FILTERED } from 'zlib'
-import CustomerPagejs from './CustomerPagejs'
+// import CustomerPagejs from './CustomerPagejs'
 
 const CustomerPage = () => {
   const array = ['sea', 'pal', 3, 4, 5, 6, 7, 8, 9, 0]
@@ -41,8 +41,8 @@ const CustomerPage = () => {
         <span><i className='far fa-heart' /></span>
         <span><i className='far fa-star' /></span>
         <span>{id}</span>
-        <span><i className='fas fa-caret-down' id='HideandShow'/></span>
-				<ul id='hideMenu'>
+        <span><i className='fas fa-caret-down' onclick={() => {this.isHideList = !(this.isHideList)}} id='HideandShow'/></span>
+				<ul style={{display: (this.isHideList) ? "inline-block" : "none"}} id='hideMenu'>
 					<li><a href='#'></a></li>
 					<li><a href='#'></a></li>
 					<li><a href='#'></a></li>
@@ -114,6 +114,17 @@ const CustomerPage = () => {
 				<img src='' />
 				</div>
       </div>
+			{/* <script>
+				{
+					let hideMenu = document.getElementById('hideMenu')
+    			const hideButton = document.getElementById('HideandShow')
+    			hideButton.addEventListener('click', ()=>{
+        	if(hideMenu.style.display === 'none'){
+            hideMenu.style.display = 'inline-block'
+        	} else{
+            hideMenu.style.display = 'none'
+        	}}
+			</script> */}
     </div>
   )
 }

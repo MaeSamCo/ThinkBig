@@ -6,10 +6,7 @@ import '../components/Management.css'
 class Management extends Component {
 
     showAlert() {
-
     }
-
-ss
     render() {        
         const jangso= ["꽃빛공원", "디미고", "딤이고","한국디지털미디어고등학교 체육관", "우와"];
         return (
