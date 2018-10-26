@@ -76,6 +76,7 @@
 }
 
 .detailed-info {
+    float:right;
     cursor: pointer;
 }
 .detailed-box{
@@ -114,4 +115,13 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.modal-title {
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0 10px 20px 0;
+}
+.single-content {
+    margin: 0 10px 10px 0;
 }
