@@ -12,28 +12,19 @@ class ContextProvider extends Component {
     }
 
     componentDidMount() {
-        getFireDB('Users/')
+        getFireDB('/Users/name')
         .on('value', (snapshot) => {
-            console.log(snapshot.val())
+            this.setState({wow: snapshot.val()})
+            // console.log(snapshot.val())
         })
     }
 
     state = {
-        wow: false
+        wow: ''
     }
 
     actions = {
-        showValue: () => {
-            getFireDB('Users/')
-                .once('value')
-                .then((snapshot) => {
-                    if (snapshot.exists()) {
-                        console.log(snapshot.val())
-                    } else {
 
-                    }
-                })
-        }
     }
 
     render() {
