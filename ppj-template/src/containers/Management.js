@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components'
 import {PrettyButton, PB} from '../components/PrettyButton'
 import '../components/Management.css'
 import Modal from '../components/Modal';
+import HeaderBar from '../components/header';
 
 class Management extends Component {
 
@@ -35,12 +36,7 @@ class Management extends Component {
 
         return (
             <div>   
-                <div className="upper-bar">
-                    <div className="upper-bar-header">
-                        <a href="#">Management Page</a>
-                        <div className="upper-bar-right">관리자 <i className="fas fa-angle-down"></i></div>
-                    </div>
-                </div>
+                <HeaderBar />
                 <div>
                     <div className="all-manage-box">
                         <div className="manage-location">
