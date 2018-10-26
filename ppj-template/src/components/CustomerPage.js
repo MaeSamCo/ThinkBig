@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './CustomerPage.css'
 import { Z_FILTERED } from 'zlib'
+import Custompage from './CustomerPagejs'
 
 const CostumerPage = () => {
   const array = ['sea', 'pal', 3, 4, 5, 6, 7, 8, 9, 0]
