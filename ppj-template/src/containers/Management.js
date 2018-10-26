@@ -42,6 +42,10 @@ import Modal from '../components/Modal';
     }
 class Management extends Component {
 
+<<<<<<< HEAD
+    showAlert() {
+    }
+=======
     constructor(props) {
         super(props);
         
@@ -66,6 +70,7 @@ class Management extends Component {
         //ReactDOM.render(<div className="modal-title">{this.state.jangso['name'][currentIndex]}</div>, document.getElementById('modal'))
     }
 
+>>>>>>> cd16e78779507fd0254676f49e47804bac3c1bba
     render() {        
 
         return (
