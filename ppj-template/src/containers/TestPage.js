@@ -11,10 +11,10 @@ class TestPage extends Component {
 
   save(){
     
-    userId=document.getElementById("ID").value
-    name=document.getElementById("name").value
-    email=document.getElementById("email").value
-    putFireDB(userId, name, email)
+    const userId=document.getElementById("ID").value
+    const name=document.getElementById("name").value
+    const email=document.getElementById("email").value
+    putFireDB('Users/'+userId, name, email)
     console.log('save')
   }
     render() {
@@ -27,7 +27,7 @@ class TestPage extends Component {
                     name:<input id='name' type="text"/><br/>
                     email:<input id='email' type="text"/><br/>
                     <div className='submit' onClick={this.save}>submit</div>
-                    {writeUserData(userId,name,email)}
+                    {/* {writeUserData(userId,name,email)} */}
             </div>
         )
     }
