@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import './CustomerPage.css'
 import { Z_FILTERED } from 'zlib'
-import Custompage from './CustomerPagejs'
+// import Custompage from './CustomerPagejs'
 
-const CostumerPage = () => {
+const CustomerPage = () => {
   const array = ['sea', 'pal', 3, 4, 5, 6, 7, 8, 9, 0]
   const id = ['김정빈']
   const searchRes = ['호빈', '정빈', '우재', '성민', '종현', '제윤', '철완', '평진', '종민', '서진']
@@ -20,6 +20,18 @@ const CostumerPage = () => {
     '호영': false,
     '종민': true,
     '서진': true
+  }
+  const score = {
+    '호빈': 9.9,
+    '정빈': 9.7,
+    '우재': 9.9,
+    '성민': 1.5,
+    '종현': 10,
+    '동환': 5.5,
+    '철완': 8.5,
+    '호영': 7.3,
+    '종민': 6.8,
+    '서진': 1
   }
   return (
     <div className='customerMain'>
@@ -56,7 +68,7 @@ const CostumerPage = () => {
               <ul>
                 {
                   searchRes.map(item =>
-                    <li>
+                    <li class='customerMain-content-list'>
                       <a>
                         <div className='customerMain-content-placeCard'>
                           <img src='' />
@@ -67,7 +79,8 @@ const CostumerPage = () => {
                               <i class='fas fa-user' /><span>10/10</span>
                               {
                                 isReserved[item] ? <span>reserved</span> : <span>vacancy</span>
-                              }
+															}
+															<span>{score[item]}</span>
                             </div>
                           </div>
                         </div>
@@ -83,4 +96,4 @@ const CostumerPage = () => {
   )
 }
 
-export default CostumerPage
+export default CustomerPage

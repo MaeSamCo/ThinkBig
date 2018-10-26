@@ -100,12 +100,12 @@ ul{
 	padding-left: 5vw;
 }
 .customerMain-content-searchRes > ul > li{
-	padding: 1vh 0;
+	padding: 1vh 0.5vw;
 }
 .customerMain-content-placeCard{
 	display: flex;
 }
-.customerMain-content-placeCard:hover{
+.customerMain-content-list:hover{
 	background-color: rgba(0, 0, 0, 0.04)
 }
 .customerMain-content-placeCard > img{
