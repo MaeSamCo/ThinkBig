@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './CustomerPage.css'
 import { Z_FILTERED } from 'zlib'
-import CustomerPagejs from './CustomerPagejs'
 
 const CustomerPage = () => {
   const array = ['sea', 'pal', 3, 4, 5, 6, 7, 8, 9, 0]
@@ -9,6 +8,7 @@ const CustomerPage = () => {
   const searchRes = ['호빈', '정빈', '우재', '성민', '종현', '제윤', '철완', '평진', '종민', '서진']
   const forFilter = ['평점순', '신규순', '가까운순']
   const text = '연애하고 싶다 연애하고 싶다 연애하고 싶다 연애하고 싶다 연애하고 싶다 연애하고 싶다'
+  let isHideList = false
   const isReserved = {
     '호빈': true,
     '정빈': false,
@@ -41,8 +41,8 @@ const CustomerPage = () => {
         <span><i className='far fa-heart' /></span>
         <span><i className='far fa-star' /></span>
         <span>{id}</span>
-        <span><i className='fas fa-caret-down' id='HideandShow'/></span>
-				<ul id='hideMenu'>
+        <span><i className='fas fa-caret-down' onclick={() => {this.isHideList = !(this.isHideList)} id='HideandShow'/></span>
+				<ul style={{"display": {isHideList ? "inline-block" : "none"}}} id='hideMenu'>
 					<li><a href='#'></a></li>
 					<li><a href='#'></a></li>
 					<li><a href='#'></a></li>
