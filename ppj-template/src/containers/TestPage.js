@@ -6,14 +6,12 @@ class TestPage extends Component {
         super(props)
     }
 
-    componentDidMount() {
-        this.props.actions.showValue()
-    }
-
     render() {
         return (
             <div id="test-page">
-                <h1>우와</h1>
+                <h1>
+                    {this.props.state.wow}
+                </h1>
             </div>
         )
     }
