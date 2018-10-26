@@ -27,11 +27,13 @@ class Modal extends React.Component {
         display: 'flex',
         backgroundColor: '#fff',
         borderRadius: 5,
-        maxWidth: 500,
+        maxWidth: 400,
         minHeight: 300,
         margin: '0 auto',
         padding: 30,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        fontFamily: '나눔고딕',
+        fontSize: '16px'
     };
 
     /* The Close Button */
@@ -52,7 +54,7 @@ class Modal extends React.Component {
     return (
       <div className="backdrop" style={backdropStyle}>
         <div className="modal" style={modalStyle}>
-            
+            <div></div>
             {this.props.children}
             <span className="close" onClick={this.props.onClose} style={close}>&times;</span>
             {/* <div className="footer">
