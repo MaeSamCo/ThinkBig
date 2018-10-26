@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Sunflower:500');
+body{
+	font-family: 'Sunflower';
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+span{
+	display: inline-block;
+}
+ul{
+	list-style: none;
+}
+.customerMain{
+	/* background-color: ivory; */
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.customerMain-header{
+	position: sticky;
+	top: 0;
+	padding: 3vh 0;
+	background-color: white;
+	z-index: 10;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	display: flex;
+	justify-content: flex-end;
+}
+
+.customerMain-header span{
+	font-size: 3vh;
+	padding: 0 0.4vw;
+	flex: 0.5;
+}
+.customerMain-header span:nth-child(1){
+	font-weight: 700;
+	text-align: center;
+	flex: 5;
+}
+.customerMain-header span:nth-child(2){
+	flex: 20;
+}
+.customerMain-header span:nth-child(5){
+	flex: 1.5;
+	text-align: center;
+}
+.customerMain-header ul{
+	display: none;
+	position: relative;
+}
+.customerMain-content-area{
+	width: 100%;
+	display: flex;
+}
+.customerMain-navbar{
+	flex: 2;
+	border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+.customerMain-navbar > ul {
+	padding: 0;
+}
+.customerMain-navbar > ul > li {
+	font-size: 1vw;	
+	padding: 2vh 0 2vh 1vw;
+}
+.customerMain-navbar > ul > li:hover{
+	background-color: rgba(0, 0, 0, 0.05)
+}
+.customerMain-content {
+	flex: 8;
+	padding: 6vh 5vw
+}
+.customerMain-title{
+	font-size: 2vw;
+	padding: 5vh 0;
+}
+.customerMain-content form{
+	display: flex;
+}
+.customerMain-content form i{
+	font-size: 5vh;
+	flex: 1;
+	text-align: center;
+	line-height: 10vh;
+}
+.customerMain-content input{
+	height: 10vh;
+	border: 0;
+	font-size: 3vh;
+	border-bottom: 3px solid black;
+	flex: 11;
+}
+.customerMain-content input:focus{
+	outline: 0;
+}
+.customerMain-content-searchRes{
+	padding-top: 5vh;
+}
+.customerMain-content-searchRes ul{
+	padding: 3vh 0 3vh 5vw;
+}
+.customerMain-content-searchFilter{
+	padding-left: 5vw;
+}
+.customerMain-content-searchRes > ul > li{
+	padding: 1vh 0.5vw;
+}
+.customerMain-content-placeCard{
+	display: flex;
+}
+.customerMain-content-list:hover{
+	background-color: rgba(0, 0, 0, 0.04)
+}
+.customerMain-content-placeCard > img{
+	height: 14vh;
+	width: 14vh;
+	background-color: gray;
+}
+.customerMain-content-placeCard-detail{
+	display: flex;
+	flex-direction: column;
+	padding-left: 1vw;
+	font-size: 2vh;
+}
+.customerMain-content-placeCard-detail > div{
+	padding: 1vh 0;
+}
+.customerMain-content-placeCard-title{
+	font-size: 3vh;
+	font-weight: bold;
+}
+.customerMain-content-placeCard-sum span{
+	padding-left: 0.5vw;
+}
+.customerMain-footer{
+	display: flex;
+	background-color: black;
+	color: white;
+	padding: 5vh 3vw;
+	justify-content: space-between;
+}
+.customerMain-footer img{
+	width: 5vw;
+	height: 5vw;
+	background-color: white;
+}
+.customerMain-footer-title{
+	font-size: 8vh;
+}
+.customerMain-footer-contact span{
+	padding-right: 2vh;
+}
+.customerMain-footer-contact span > i{
+	padding-right: 1vh;
+}

@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { ContextHOC } from '../context/ContextMain'
+import PrettyButton from '../components/PrettyButton'
 
 class TestPage extends Component {
-    constructor(props) {
-        super(props)
-    }
+  constructor (props) {
+    super(props)
+  }
 
     render() {
         return (
