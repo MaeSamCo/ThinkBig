@@ -76,6 +76,7 @@
 }
 
 .detailed-info {
+    float:right;
     cursor: pointer;
 }
 .detailed-box{
