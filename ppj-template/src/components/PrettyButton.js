@@ -12,4 +12,4 @@ const PrettyButton = styled.button`
 const PB = styled.button`
 background-color:black;
 `
-export {PrettyButton, PB}
+export { PrettyButton, PB }

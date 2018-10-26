@@ -23,13 +23,14 @@ ul{
 	top: 0;
 	padding: 3vh 0;
 	background-color: white;
+	z-index: 10;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 	display: flex;
 	justify-content: flex-end;
 }
 
 .customerMain-header span{
-	font-size: 1.3vw;
+	font-size: 3vh;
 	padding: 0 0.4vw;
 	flex: 0.5;
 }
@@ -44,6 +45,10 @@ ul{
 .customerMain-header span:nth-child(5){
 	flex: 1.5;
 	text-align: center;
+}
+.customerMain-header ul{
+	display: none;
+	position: relative;
 }
 .customerMain-content-area{
 	width: 100%;
@@ -65,7 +70,7 @@ ul{
 }
 .customerMain-content {
 	flex: 8;
-	padding: 8vh 5vw
+	padding: 6vh 5vw
 }
 .customerMain-title{
 	font-size: 2vw;
@@ -128,4 +133,25 @@ ul{
 }
 .customerMain-content-placeCard-sum span{
 	padding-left: 0.5vw;
+}
+.customerMain-footer{
+	display: flex;
+	background-color: black;
+	color: white;
+	padding: 5vh 3vw;
+	justify-content: space-between;
+}
+.customerMain-footer img{
+	width: 5vw;
+	height: 5vw;
+	background-color: white;
+}
+.customerMain-footer-title{
+	font-size: 8vh;
+}
+.customerMain-footer-contact span{
+	padding-right: 2vh;
+}
+.customerMain-footer-contact span > i{
+	padding-right: 1vh;
 }

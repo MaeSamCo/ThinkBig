@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './CustomerPage.css'
 import { Z_FILTERED } from 'zlib'
-// import Custompage from './CustomerPagejs'
+import CustomerPagejs from './CustomerPagejs'
 
 const CustomerPage = () => {
   const array = ['sea', 'pal', 3, 4, 5, 6, 7, 8, 9, 0]
@@ -38,10 +38,17 @@ const CustomerPage = () => {
       <div className='customerMain-header'>
         <span className='logoTitle'>MaeSamCo</span>
         <span className='customerMain-header-space' />
-        <span><i class='far fa-heart' /></span>
-        <span><i class='far fa-star' /></span>
+        <span><i className='far fa-heart' /></span>
+        <span><i className='far fa-star' /></span>
         <span>{id}</span>
-        <span><i class='fas fa-caret-down' /></span>
+        <span><i className='fas fa-caret-down' id='HideandShow'/></span>
+				<ul id='hideMenu'>
+					<li><a href='#'></a></li>
+					<li><a href='#'></a></li>
+					<li><a href='#'></a></li>
+					<li><a href='#'></a></li>
+					<li><a href='#'></a></li>
+				</ul>
       </div>
       <div className='customerMain-wrapper'>
 
@@ -49,13 +56,13 @@ const CustomerPage = () => {
 
           <div className='customerMain-navbar'>
             <ul>
-              {array.map(item => <li><a href='#'><i class='fas fa-code' />{item}</a></li>)}
+              {array.map(item => <li><a href='#'><i className='fas fa-code' />{item}</a></li>)}
             </ul>
           </div>
           <div className='customerMain-content'>
             <div className='customerMain-title'>Customer</div>
             <form>
-              <i class='fas fa-search' /><input type='text' name='place-search' placeholder='search' />
+              <i className='fas fa-search' /><input type='text' name='place-search' placeholder='search' />
             </form>
             <div className='customerMain-content-searchRes'>
               <form className='customerMain-content-searchFilter'>
@@ -68,7 +75,7 @@ const CustomerPage = () => {
               <ul>
                 {
                   searchRes.map(item =>
-                    <li class='customerMain-content-list'>
+                    <li className='customerMain-content-list'>
                       <a>
                         <div className='customerMain-content-placeCard'>
                           <img src='' />
@@ -76,11 +83,11 @@ const CustomerPage = () => {
                             <div className='customerMain-content-placeCard-title'>{item}</div>
                             <div className='customerMain-content-placeCard-exp'>{text}</div>
                             <div className='customerMain-content-placeCard-sum'>
-                              <i class='fas fa-user' /><span>10/10</span>
+                              <i className='fas fa-user' /><span>10/10</span>
                               {
                                 isReserved[item] ? <span>reserved</span> : <span>vacancy</span>
-															}
-															<span>{score[item]}</span>
+                              }
+                              <span>평점 : {score[item]}</span>
                             </div>
                           </div>
                         </div>
@@ -91,6 +98,21 @@ const CustomerPage = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className='customerMain-footer'>
+			  <div className='customerMain-footer-left'>
+					<div className='customerMain-footer-title'>
+						MaeSamCo
+					</div>
+					<div className='customerMain-footer-contact'>
+						<span><i className="far fa-envelope"></i> firstunderbar@gmail.com</span>
+						<span><i className="fas fa-phone"></i>010-1234-5678</span>
+						
+					</div>
+				</div>
+				<div className='customerMain-footer-right'>
+				<img src='' />
+				</div>
       </div>
     </div>
   )
