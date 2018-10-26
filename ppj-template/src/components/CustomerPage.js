@@ -41,8 +41,8 @@ const CustomerPage = () => {
         <span><i className='far fa-heart' /></span>
         <span><i className='far fa-star' /></span>
         <span>{id}</span>
-        <span><i className='fas fa-caret-down' onclick={() => {this.isHideList = !(this.isHideList)} id='HideandShow'/></span>
-				<ul style={{"display": {isHideList ? "inline-block" : "none"}}} id='hideMenu'>
+        <span><i className='fas fa-caret-down' onclick={() => {this.isHideList = !(this.isHideList)}} id='HideandShow'/></span>
+				<ul style={{display: (this.isHideList) ? "inline-block" : "none"}} id='hideMenu'>
 					<li><a href='#'></a></li>
 					<li><a href='#'></a></li>
 					<li><a href='#'></a></li>
