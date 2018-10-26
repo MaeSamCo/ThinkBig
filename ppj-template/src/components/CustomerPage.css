@@ -47,8 +47,20 @@ ul{
 	text-align: center;
 }
 .customerMain-header ul{
+	border: 1px solid rgba(0, 0, 0, 0.3);
 	display: none;
-	position: relative;
+	position: fixed;
+	right: 2vw;
+	top: 8vh;
+	background-color: white;
+	padding: 0;
+}
+.customerMain-header ul > li{
+	font-size: 3vh;
+	padding: 3vh 1vw;
+}
+.customerMain-header ul > li:hover{
+	background-color: rgba(0, 0, 0, 0.05)
 }
 .customerMain-content-area{
 	width: 100%;
@@ -111,7 +123,7 @@ ul{
 	display: flex;
 }
 .customerMain-content-list:hover{
-	background-color: rgba(0, 0, 0, 0.04)
+	background-color: rgba(0, 0, 0, 0.05)
 }
 .customerMain-content-placeCard > img{
 	height: 14vh;
