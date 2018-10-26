@@ -8,8 +8,8 @@ import App from './App'
 import TestPage from './containers/TestPage'
 import PyeongJinPage from './containers/PyeongJinPage'
 import JongMinPage from './containers/JongMinPage'
-import JeYunPage from './containers/JeYunPage'
 import GunHeePage from './containers/GunHeePage'
+import Management from './containers/Management';
 
 class AppRouter extends React.Component {
   render () {
