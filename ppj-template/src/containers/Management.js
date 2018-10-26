@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'
 import styled, { css } from 'styled-components'
 import {PrettyButton, PB} from '../components/PrettyButton'
 import '../components/Management.css'
-import Modal from '../components/Modal';
-import HeaderBar from '../components/header';
+import Modal from '../components/Modal'
+import HeaderBar from '../components/header'
 
 class Management extends Component {
 
@@ -12,26 +12,16 @@ class Management extends Component {
         super(props);
         
         this.state = { isOpen: false, currentIndex: 0,
-            jangso: {name: ["꽃빛공원", "디미고", "딤이고","한국디지털미디어고등학교 체육관", "우와"],
-            people: [5,3,1,4,6],
-            clean: ["청결","더러움","보통","보통","보통"],
-            temperatue: [30, 12,60,100,20]}
+            jangso_name: ["꽃빛공원", "디미고", "딤이고", "꽃빛공원 농구장","한국디지털미디어고등학교 체육관"],
+            jangso: [ ["꽃빛공원", 5, "청결",30], ["디미고",2,"더러움",14], ["딤이고",2,"보통",100]
+            , ["꽃빛공원 농구장",2,"더러움",68], ["한국디지털미디어고등학교 체육관",2,"더러움",20]],
+            fieldName: "",
+            fieldPeople: 0,
+            fieldClean: "",
+            fieldTemperature: 0
          }
     }
     
-
-    toggleModal = (index) => {
-        this.setState({
-            isOpen: !this.state.isOpen,
-            currentIndex: index}
-        );
-        // </div><div className="single-content">현재인원 : {this.state.jangso['people'][0]}</div>
-        // <div className="single-content">청결관리 : {this.state.jangso['clean'][0]}</div>
-        // <div className="single-content">시간관리 : <input type="time"></input></div>
-        // <div className="single-content">기온 : {this.state.jangso['temperatue'][0]}℃</div>)
-        //ReactDOM.render(<div className="modal-title">{this.state.jangso['name'][currentIndex]}</div>, document.getElementById('modal'))
-    }
-
     render() {        
 
         return (
@@ -47,11 +37,12 @@ class Management extends Component {
 
                             <div className="location-list">
                                 {
-                                    this.state.jangso['name'].map((name,index)=>                      
+                                    this.state.jangso_name.map((name,index)=>                      
                                     <div className="location-element">
                                         <div className="location-element-title">
                                             {name}
-                                            <span className="detailed-info" id={index.toString()} onClick={() => this.toggleModal(index)}><i className="fas fa-info location-element-icon"></i></span>
+                                            <span className="detailed-info" onClick={() => this.setState({isOpen: true, fieldName: this.state.jangso_name[index], fieldPeople: this.state.jangso[index][1]
+                                            , fieldClean: this.state.jangso[index][2], fieldTemperature: this.state.jangso[index][3]})}><i className="fas fa-info location-element-icon"></i></span>
                                         </div>
                                     </div>
                                     )
@@ -61,10 +52,22 @@ class Management extends Component {
 
                     </div>
                 </div>
-                <Modal show={this.state.isOpen}
-                    onClose={() => this.toggleModal(0)}>
+                {
+                    this.state.isOpen &&(
+                    <Modal>
+                        <div>
+                            <div className="modal-title">{this.state.fieldName}</div>
+                            <div className="single-content">현재인원 : {this.state.fieldPeople}</div>
+                            <div className="single-content">청결관리 : {this.state.fieldClean}</div>
+                            <div className="single-content">시간관리 : <input type="time"></input></div>
+                            <div className="single-content">기온 : {this.state.fieldTemperature}℃</div>
+                        </div>
                         
-                </Modal>
+                        
+
+                        <span class="close" onClick={() => this.setState({isOpen: false})}>&times;</span>
+                    </Modal>)
+                }
             </div>
         )
     }
