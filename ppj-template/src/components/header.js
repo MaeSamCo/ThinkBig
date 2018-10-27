@@ -8,14 +8,19 @@ class HeaderBar extends Component {
       isHideList: false
     }
   }
+
   render () {
+    const ststyle = {
+      WebkitStroke: '0px',
+      color: 'black'
+    }
     const id = ['김정빈']
     return (
       <div className='customerMain-header'>
         <span className='logoTitle'>MaeSamCo</span>
         <span className='customerMain-header-space' />
         <span><i className='far fa-heart' /></span>
-        <span><i className='far fa-star' /></span>
+        <span><i className='far fa-star' style={ststyle} /></span>
         <span>{id}</span>
         <span><i className='fas fa-caret-down' onClick={() => { this.setState({ isHideList: !this.state.isHideList }) }} id='HideandShow' /></span>
         <ul style={{ display: (this.state.isHideList) ? 'inline-block' : 'none' }} id='hideMenu'>

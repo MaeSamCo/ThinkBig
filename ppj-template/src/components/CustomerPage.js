@@ -46,7 +46,7 @@ class CustomerPage extends Component {
               </ul>
             </div>
             <div className='customerMain-content'>
-              <div className='customerMain-title'>Customer</div>
+              <div className='customerMain-title'>Search</div>
               <form>
                 <i className='fas fa-search' /><input type='text' name='place-search' placeholder='search' />
               </form>
@@ -85,7 +85,7 @@ class CustomerPage extends Component {
             </div>
           </div>
         </div>
-        <Footer></Footer>
+        <Footer />
         {/* <script>
 					{
 						let hideMenu = document.getElementById('hideMenu')

@@ -1,48 +1,29 @@
 body{
     font-family: '나눔고딕';
 }
-.upper-bar {
-    /* display: flex; */
-    margin: 0;
-    padding: 20px;
-    border-bottom: 2px solid #EFEFEF;
-    overflow: hidden;
+input{
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+    padding-left: 0.3vw;
+    margin-left: 0.3vw;
 }
-
-.upper-bar-header {
-    
+input:focus{
+    outline: 0;
+    background-color: white;
 }
-
-.upper-bar-header a {
-    font-size: 30px;
-    font-weight: bold;
-    margin:0;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-}
-
-.upper-bar-right {
-    float: right;
-    font-size: 20px;
-    
-}
-
 .all-manage-box {
     display: flex;
     margin: 10px 20px 20px 10px;
-    padding: 20px;
+    padding: 5vh 10vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 1px solid #DFDFDF;
     border-radius: 10px;
 }
-
-
 .manage-location{
     background-color: #FAFAFA;
-    width: 40vw;
+    width: 60vw;
 }
 
 .manage-location-header {
@@ -75,7 +56,7 @@ body{
 
 .location-element-icon {
     float: right;
-    color: blue;
+    color: black;
     font-size: 24px;
 }
 
@@ -123,9 +104,14 @@ body{
 
 .modal-title {
     font-weight: bold;
-    font-size: 22px;
-    margin: 0 10px 20px 0;
+    font-size: 2rem;
+    padding: 0.5vh 0;
+    color: rgba(0, 0, 0, 0.7);
+}
+.modal-title > span{
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
 }
 .single-content {
-    margin: 0 10px 10px 0;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 6vh;
 }

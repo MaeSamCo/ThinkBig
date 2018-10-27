@@ -17,12 +17,12 @@ class ContextProvider extends Component {
         //     this.setState({wow: snapshot.val()})
         //     // console.log(snapshot.val())
         // })
-        // getFireDB('/place/dimigobasketball/')
-        // .on('value', (snapshot) => {
-        //     this.setState(snapshot.val())
-        //     this.setState({reservationlist: (Object.values((snapshot.val()).reservationlist))[0]})
-        //     // console.log(snapshot.val())
-        // })
+        getFireDB('/place/dimigobasketball/')
+        .on('value', (snapshot) => {
+            this.setState(snapshot.val())
+            this.setState({reservationlist: (Object.values((snapshot.val()).reservationlist))[0]})
+            // console.log(snapshot.val())
+        })
 
         getFireDB('place/')
             .on('value', (snapshot) => {

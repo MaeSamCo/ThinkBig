@@ -22,7 +22,7 @@ export const getFireDB = (path) => {
   return firebase.database().ref(path)
 }
 
-export function putPlacetoDB(path,name,c,mp,dc,rt,lo) {
+export function putPlacetoDB (path, name, c, mp, dc, rt, lo) {
   return firebase.database().ref(path).set({
     placename: name,
     classify: c,
@@ -30,5 +30,5 @@ export function putPlacetoDB(path,name,c,mp,dc,rt,lo) {
     description: dc,
     recommendtime: rt,
     location: lo
-  });
+  })
 }
