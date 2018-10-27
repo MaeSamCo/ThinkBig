@@ -7,7 +7,6 @@ import Modal from '../components/Modal'
 import HeaderBar from '../components/header'
 import { getFireDB } from '../components/FirebaseInit'
 // import { ContextHOC } from '../context/ContextMain'
-import { putPlacetoDB } from '../components/FirebaseInit'
 
 class Management extends Component {
 
@@ -15,15 +14,16 @@ class Management extends Component {
         super(props);
         
         this.state = { isAddOpen: false, isDetailedOpen: false, currentIndex: 0, isLoaded: false,
-            placeList: {}
+            placeList: []
          }
 
     }
 
     componentDidMount() {
-        getFireDB('/place/')
+        getFireDB('place')
         .on('value',snapshot => {
-            this.setState({placeList: snapshot.val()})
+            // console.log()
+            this.setState({placeList: Object.keys(snapshot.val())})
            //  this.setState({reservationlist: (Object.values((snapshot.val()).reservationlist))[0]})
         })
         this.setState({isLoaded: true})
@@ -59,9 +59,9 @@ class Management extends Component {
                                 {
                                     this.state.isLoaded && (
                                     this.state.placeList.map((place,index)=>                      
-                                    <div className="location-element">
+                                    <div key={index} className="location-element">
                                         <div className="location-element-title">
-                                            {name}
+                                            {place}
                                             <span className="detailed-info" onClick={() => this.modalon(place['placename'], place['classify']
                                             , place['maxpeople'], place['description'], place['recommendtime'], place['location'])}><i className="fas fa-info location-element-icon"></i></span>
                                         </div>

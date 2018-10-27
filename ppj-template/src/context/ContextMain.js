@@ -26,7 +26,7 @@ class ContextProvider extends Component {
 
         getFireDB('place/')
             .on('value', (snapshot) => {
-                console.log(Object.keys(snapshot.val()))
+                // console.log(Object.keys(snapshot.val()))
             })
 
         //     while(getFireDB('/place/dimigobasketball/reservationlist_'+num)=!''){
