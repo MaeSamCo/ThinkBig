@@ -32,7 +32,7 @@ class JongMinPage extends Component {
                 </div>
 
                 <div className='topsearchbar'>
-                    <input className="search" placeholder=" Search                                                  ?" type="text"/>
+                    <input className="search" placeholder=" Search?" type="text"/>
                     <div className='newpost'>+ Create New Post</div>
                 </div>
 

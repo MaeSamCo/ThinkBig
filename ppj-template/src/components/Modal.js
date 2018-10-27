@@ -1,11 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types';
-
-const modalRoot = document.getElementById('modal-root');
-
-
-
 class Modal extends React.Component {
 
     render() {
@@ -34,7 +28,8 @@ class Modal extends React.Component {
             padding: 30,
             justifyContent: 'space-between',
             fontFamily: '나눔고딕',
-            fontSize: '16px'
+            fontSize: '16px',
+            boxShadow: '3px 3px 5px #666666'
         };
 
         /* The Close Button */
@@ -57,11 +52,5 @@ class Modal extends React.Component {
         )
     }
 }
-
-Modal.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  show: PropTypes.bool,
-  children: PropTypes.node
-};
 
 export default Modal;
