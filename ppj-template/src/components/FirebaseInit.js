@@ -21,3 +21,14 @@ export const fire = () => {
 export const getFireDB = (path) => {
   return firebase.database().ref(path)
 }
+
+export function putFireDB(path,name,c,mp,dc,rt,lo) {
+  return firebase.database().ref(path).set({
+    username: name,
+    classify: c,
+    maxpeople: mp,
+    description: dc,
+    recommendtime: rt,
+    location: lo
+  });
+}
