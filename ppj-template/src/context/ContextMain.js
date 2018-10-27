@@ -12,17 +12,23 @@ class ContextProvider extends Component {
     }
 
     componentDidMount() {
-        getFireDB('/Users/name')
-        .on('value', (snapshot) => {
-            this.setState({wow: snapshot.val()})
-            // console.log(snapshot.val())
-        })
-        getFireDB('/place/dimigobasketball/')
-        .on('value', (snapshot) => {
-            this.setState(snapshot.val())
-            this.setState({reservationlist: (Object.values((snapshot.val()).reservationlist))[0]})
-            console.log(snapshot.val())
-        })
+        // getFireDB('/Users/name')
+        // .on('value', (snapshot) => {
+        //     this.setState({wow: snapshot.val()})
+        //     // console.log(snapshot.val())
+        // })
+        // getFireDB('/place/dimigobasketball/')
+        // .on('value', (snapshot) => {
+        //     this.setState(snapshot.val())
+        //     this.setState({reservationlist: (Object.values((snapshot.val()).reservationlist))[0]})
+        //     // console.log(snapshot.val())
+        // })
+
+        getFireDB('place/')
+            .on('value', (snapshot) => {
+                console.log(Object.keys(snapshot.val()))
+            })
+
         //     while(getFireDB('/place/dimigobasketball/reservationlist_'+num)=!''){
         //         .on(getFireDB('/place/dimigobasketball/reservationlist_'+num)=!''&&'value', (snapshot) => {
         //             this.setState({recommanded_time+num: snapshot.val()})
@@ -34,7 +40,7 @@ class ContextProvider extends Component {
     }
 
     state = {
-
+        
     }
 
     actions = {

@@ -5,10 +5,13 @@ import PrettyButton from '../components/PrettyButton'
 class TestPage extends Component {
   constructor (props) {
     super(props)
+
+    this.get = this.get.bind(this)
   }
   get(){
+    console.log(this.props.state.name)
     // console.log(Object.values(getFireDB('place/'+document.getElementById("find").val())))
-    console.log(getFireDB('place/basketball'))
+    // getFireDB('place/dimigobasketball').on('value', (snapshot) => {console.log(snapshot.val())})
   }
     render() {
         return (
