@@ -3,15 +3,16 @@ body{
 }
 input{
     border: 0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
-    padding-left: 0.3vw;
-    margin-left: 0.3vw;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+    padding: 0.5vh 0.3vw;
+    margin: 0 1vw;
 }
 input:focus{
     outline: 0;
     background-color: white;
 }
 .all-manage-box {
+    color: rgba(0, 0, 0, 0.7);
     display: flex;
     margin: 10px 20px 20px 10px;
     padding: 5vh 10vw;
@@ -114,4 +115,20 @@ input:focus{
 .single-content {
     color: rgba(0, 0, 0, 0.7);
     line-height: 6vh;
+}
+.addButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 78, 78);
+    box-shadow: 3px 3px 3px rgb(255, 206, 206);
+    width: 10vw;
+    height: 10vh;
+    transition: all 0.3s;
+    color: white;
+    margin: 5vh 0;
+    border-radius: 5%;
+}
+.addButton:hover{
+    background-color:rgb(252, 157, 157);
 }

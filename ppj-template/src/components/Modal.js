@@ -23,12 +23,13 @@ class Modal extends React.Component {
       borderRadius: 5,
       maxWidth: 400,
       minHeight: 300,
-      margin: '0 auto',
+      margin: '-10vh auto',
       padding: '7vh',
       justifyContent: 'space-between',
       fontFamily: '나눔고딕',
       fontSize: '16px',
-      boxShadow: '3px 3px 5px #666666'
+      fontWeight: 'bold',
+      boxShadow: '1px 1px 4px 0px #000000'
     }
 
     /* The Close Button */

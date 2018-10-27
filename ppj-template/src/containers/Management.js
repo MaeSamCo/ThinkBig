@@ -83,7 +83,7 @@ class Management extends Component {
                 <div className='single-content'><label htmlFor='description'>설명</label><input id='description' type='textarea' /></div>
                 <div className='single-content'><label htmlFor='recommendtime'>권장시간</label><input id='recommendtime' type='number' />분</div>
                 <div className='single-content'><label htmlFor='location'>위치</label><input id='location' type='text' /></div>
-                <button onClick={this.save}>추가!!!</button>
+                <div className='addButton' onClick={this.save}>추가!!!</div>
               </div>
 
               <span className='close' onClick={() => this.setState({ isAddOpen: false })}>&times;</span>
@@ -97,7 +97,6 @@ class Management extends Component {
                 <div className='modal-title'><span>{this.state.currentName}</span></div>
                 <div className='single-content'>장소분류 : {this.state.placeInfo[this.state.currentName]['classify']}</div>
                 <div className='single-content'>현재인원 : {this.state.placeInfo[this.state.currentName]['maxpeople']}</div>
-
                 <div className='single-content'>시간관리 : <input type='time' /></div>
               </div>
 
