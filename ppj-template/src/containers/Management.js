@@ -35,13 +35,15 @@ class Management extends Component {
   }
 
   save () {
+    alert("추가되었오")
     const name = document.getElementById('name').value
     const classify = document.getElementById('classify').value
     const maxpeople = document.getElementById('maxpeople').value
     const description = document.getElementById('description').value
     const recommendtime = document.getElementById('recommendtime').value
     const location = document.getElementById('location').value
-    putPlacetoDB('place/' + name, name, classify, maxpeople, description, recommendtime, location)
+    const star = document.getElementById('star').value
+    putPlacetoDB('place/' + name, name, classify, maxpeople, description, recommendtime, location,star)
   }
 
   render () {
@@ -83,6 +85,7 @@ class Management extends Component {
                 <div className='single-content'><label htmlFor='description'>설명</label><input id='description' type='textarea' /></div>
                 <div className='single-content'><label htmlFor='recommendtime'>권장시간</label><input id='recommendtime' type='number' />분</div>
                 <div className='single-content'><label htmlFor='location'>위치</label><input id='location' type='text' /></div>
+                <div className='single-content'><label htmlFor='recommendtime'>별점개수</label><input id='star' type='number' max='5' />개</div>
                 <div className='addButton' onClick={this.save}>추가!!!</div>
               </div>
 

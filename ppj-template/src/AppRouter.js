@@ -21,12 +21,12 @@ class AppRouter extends React.Component {
           <App>
             <Switch>
               <Route exact path='/' component={TestPage} />
-              <Route exact path='/pyeong' component={PyeongJinPage} />
-              <Route exact path='/jongmin' component={JongMinPage} />
-              <Route exact path='/management' component={Management} />
-              <Route exact path='/CustomerPage' component={CustomerContainer} />
-              <Route exact path='/gunhee' component={GunHeePage} />
-              <Route exact path='/PlaceViewing' component={PlaceViewing} />
+              <Route path='/pyeong' component={PyeongJinPage} />
+              <Route path='/jongmin' component={JongMinPage} />
+              <Route path='/management' component={Management} />
+              <Route path='/CustomerPage' component={CustomerContainer} />
+              <Route path='/gunhee' component={GunHeePage} />
+              <Route path='/PlaceViewing/:title' component={PlaceViewing} />
             </Switch>
           </App>
         </ContextProvider>

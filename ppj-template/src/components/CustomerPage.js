@@ -3,6 +3,8 @@ import './CustomerPage.css'
 import HeaderBar from './header'
 import Footer from './Footer'
 import { getFireDB, putPlacetoDB } from '../components/FirebaseInit'
+import { BrowserRouter as Router, Route,Link } from 'react-router-dom'
+import PlaceViewing from '../containers/PlaceViewing'
 // import CustomerPagejs from './CustomerPagejs'
 
 class CustomerPage extends Component {
@@ -54,10 +56,10 @@ componentDidMount() {
                   {
                     this.state.isLoaded && (
                     this.state.placeList.map((item,index) =>
+                    <Link to={"/PlaceViewing/"+item}>
                       <li key={index} className='customerMain-content-list'>
-                        <a>
-                          <div className='customerMain-content-placeCard'>
-                            <img src='' />
+                          <div key={index} className='customerMain-content-placeCard'>
+                            <img src=''/>
                             <div className='customerMain-content-placeCard-detail'>
                               <div className='customerMain-content-placeCard-title'>{item}</div>
                               <div className='customerMain-content-placeCard-exp'>{this.state.placeInfo[item]['description']}</div>
@@ -66,14 +68,16 @@ componentDidMount() {
                                 {
                                   // isReserved[item] ? <span>reserved</span> : <span>vacancy</span>
                                 }
-                                <span>평점 : {}</span>
+                                <span>평점 : </span>
                               </div>
                             </div>
                           </div>
-                        </a>
-                      </li>)
+                      </li>
+                      </Link>
+                      )
                     )
                   }
+                  {/* <Route path="/PlaceViewing/:id" component={PlaceViewing} /> */}
                 </ul>
               </div>
             </div>
