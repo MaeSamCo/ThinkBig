@@ -10,6 +10,8 @@ import PyeongJinPage from './containers/PyeongJinPage'
 import JongMinPage from './containers/JongMinPage'
 import GunHeePage from './containers/GunHeePage'
 import Management from './containers/Management'
+import CustomerContainer from './containers/CustomerContainer'
+import PlaceViewing from './containers/PlaceViewing'
 
 class AppRouter extends React.Component {
   render () {
@@ -22,7 +24,9 @@ class AppRouter extends React.Component {
               <Route exact path='/pyeong' component={PyeongJinPage} />
               <Route exact path='/jongmin' component={JongMinPage} />
               <Route exact path='/management' component={Management} />
+              <Route exact path='/CustomerPage' component={CustomerContainer} />
               <Route exact path='/gunhee' component={GunHeePage} />
+              <Route exact path='/PlaceViewing' component={PlaceViewing} />
             </Switch>
           </App>
         </ContextProvider>
