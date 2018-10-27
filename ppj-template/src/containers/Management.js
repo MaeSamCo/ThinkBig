@@ -6,6 +6,7 @@ import '../components/Management.css'
 import Modal from '../components/Modal'
 import HeaderBar from '../components/header'
 import { getFireDB, putPlacetoDB } from '../components/FirebaseInit'
+import Footer from '../components/Footer';
 // import { ContextHOC } from '../context/ContextMain'
 
 class Management extends Component {
@@ -102,7 +103,8 @@ class Management extends Component {
 
             <span className='close' onClick={() => this.setState({ isDetailedOpen: false })}>&times;</span>
           </Modal>)
-        }
+				}
+				<Footer></Footer>
       </div>
     )
   }

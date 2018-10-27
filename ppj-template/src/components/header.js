@@ -17,7 +17,7 @@ class HeaderBar extends Component {
     const id = ['김정빈']
     return (
       <div className='customerMain-header'>
-        <span className='logoTitle'>MaeSamCo</span>
+        <span className='logoTitle'><span>Alt</span></span>
         <span className='customerMain-header-space' />
         <span><i className='far fa-heart' /></span>
         <span><i className='far fa-star' style={ststyle} /></span>

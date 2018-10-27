@@ -9,11 +9,6 @@ body{
 	padding: 5vh 3vw;
 	justify-content: space-between;
 }
-.customerMain-footer img{
-	width: 5vw;
-	height: 5vw;
-	background-color: white;
-}
 .customerMain-footer-title{
 	font-size: 8vh;
 }
@@ -22,4 +17,10 @@ body{
 }
 .customerMain-footer-contact span > i{
 	padding-right: 1vh;
+}
+.customerMain-footer-right{
+    display: flex;
+    align-items: center;
+    font-size: 5rem;
+    border-bottom: 8px solid white;
 }

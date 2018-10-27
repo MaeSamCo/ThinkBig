@@ -16,7 +16,7 @@ class Footer extends Component {
           </div>
         </div>
         <div className='customerMain-footer-right'>
-          <img src='' />
+          Alt
         </div>
       </div>
     )
