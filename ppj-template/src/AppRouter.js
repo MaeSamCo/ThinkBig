@@ -9,7 +9,7 @@ import TestPage from './containers/TestPage'
 import PyeongJinPage from './containers/PyeongJinPage'
 import JongMinPage from './containers/JongMinPage'
 import GunHeePage from './containers/GunHeePage'
-import Management from './containers/Management';
+import Management from './containers/Management'
 
 class AppRouter extends React.Component {
   render () {

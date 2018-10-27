@@ -75,7 +75,7 @@ class ContextProvider extends Component {
     }
 
     actions = {
-
+        
     }
 
     render() {

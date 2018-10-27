@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+ul{
+    list-style: none;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.viewing-wrapper{
+    display: flex;
+    width: 100%;
+}
+.viewing-navbar{
+    flex: 1.75;
+    background-color: rgb(247, 247, 247);
+    padding: 5vh 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    min-height: 90vh;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+.profilePic{
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    /* background-color: gray; */
+    border: 3px solid rgb(238, 238, 238);
+    background: url('http://image.chosun.com/sitedata/image/201708/03/2017080300496_0.jpg');
+    background-size: cover;
+}
+.profileCir{
+    padding: 2vh 0;
+}
+.placeName{
+    font-size: 3vh;
+    padding: 1vh 0;
+    font-weight: bold;
+}
+.placeSubName{
+    font-size: 2vh;
+    color: gray;
+}
+.viewing-navbar > ul{
+    width: 100%;
+    
+}
+.viewing-navbar > ul > li{
+    padding: 2vh 1vw;
+    transition: 0.3s;
+    font-size: 3vh;
+    line-height: 5vh;
+}
+.viewing-navbar > ul > li:hover{
+    font-size: 3.5vh;
+}
+.viewing-navbar > ul > li > a{
+    color: gray;
+
+    font-weight: 700;
+}
+.viewing-content{
+    flex: 8.25;
+    padding: 7vh 3vw;
+}
+.viewing-content-title{
+    font-weight: bold;
+    font-size: 5vh;
+}
+.viewing-content-title span{
+    border-bottom: 2.5px solid black;
+}
+.viewing-content-cardZone{
+    padding: 5vh 0;
+    display: grid;
+    grid-column-gap: 5vh;
+    grid-row-gap: 10vh;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr))
+}
+.viewing-content-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    border-radius: 10%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.viewing-content-card:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.viewing-card-sum{
+    font-weight: bold;
+    font-size: 2vh;
+    padding: 3vh 0;
+}
+.viewing-content-card i{
+    color: rgba(0, 0, 0, 0.7);
+
+}
+.fa-basketball-ball:before,
+.fa-user-plus:before,
+.fa-clock:before,
+.fa-circle:before,
+.fa-users:before,
+.fa-times:before,
+.fa-user-friends:before,
+.fa-map-marked-alt:before{
+    font-size: 10vh;
+}
+.viewing-content-card img{
+    border-radius: 50%;
+    background-color: white;
+    padding: 3vh;
+    width: 10vh;
+    height: 10vh;
+}

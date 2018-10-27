@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+.customerMain-footer{
+	display: flex;
+	background-color: black;
+	color: white;
+	padding: 5vh 3vw;
+	justify-content: space-between;
+}
+.customerMain-footer img{
+	width: 5vw;
+	height: 5vw;
+	background-color: white;
+}
+.customerMain-footer-title{
+	font-size: 8vh;
+}
+.customerMain-footer-contact span{
+	padding-right: 2vh;
+}
+.customerMain-footer-contact span > i{
+	padding-right: 1vh;
+}
