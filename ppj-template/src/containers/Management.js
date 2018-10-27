@@ -5,7 +5,7 @@ import {PrettyButton, PB} from '../components/PrettyButton'
 import '../components/Management.css'
 import Modal from '../components/Modal'
 import HeaderBar from '../components/header'
-import { getFireDB } from '../components/FirebaseInit'
+import { getFireDB, putPlacetoDB } from '../components/FirebaseInit'
 // import { ContextHOC } from '../context/ContextMain'
 
 class Management extends Component {
@@ -14,7 +14,8 @@ class Management extends Component {
         super(props);
         
         this.state = { isAddOpen: false, isDetailedOpen: false, currentIndex: 0, isLoaded: false,
-            placeList: []
+            placeList: [], currentName: "", currentClass: "", currentMaxpeople: "", currentDescription: "", currentRecommendtime: "", 
+            currentLocation: ""
          }
 
     }
@@ -22,14 +23,9 @@ class Management extends Component {
     componentDidMount() {
         getFireDB('place')
         .on('value',snapshot => {
-            // console.log()
-            this.setState({placeList: Object.keys(snapshot.val())})
-           //  this.setState({reservationlist: (Object.values((snapshot.val()).reservationlist))[0]})
+            this.setState({placeList: Object.keys(snapshot.val()), placeInfo: snapshot.val()})
         })
         this.setState({isLoaded: true})
-    }
-    modalon(){
-        //this.setState({isDetailedOpen: true, })
     }
 
     save(){
@@ -39,7 +35,7 @@ class Management extends Component {
         const description=document.getElementById("description").value
         const recommendtime=document.getElementById("recommendtime").value
         const location=document.getElementById("location").value
-        putFireDB('place/'+name, name, classify, maxpeople, description, recommendtime, location)
+        putPlacetoDB('place/'+name, name, classify, maxpeople, description, recommendtime, location)
     }
     
     render() {        
@@ -62,8 +58,7 @@ class Management extends Component {
                                     <div key={index} className="location-element">
                                         <div className="location-element-title">
                                             {place}
-                                            <span className="detailed-info" onClick={() => this.modalon(place['placename'], place['classify']
-                                            , place['maxpeople'], place['description'], place['recommendtime'], place['location'])}><i className="fas fa-info location-element-icon"></i></span>
+                                            <span className="detailed-info" onClick={() => this.setState({isDetailedOpen:true, currentName: place})}><i className="fas fa-info location-element-icon"></i></span>
                                         </div>
                                     </div>))
                                 }
@@ -91,14 +86,14 @@ class Management extends Component {
                 }
 
                 {
-                    this.state.isDetailedOpen && (
+                    this.state.isDetailedOpen && (console.log(this.state.placeInfo['']),
                     <Modal>
                         <div>
-                            <div className="modal-title">{this.state.fieldName}</div>
-                            <div className="single-content">현재인원 : {this.state.fieldPeople}</div>
-                            <div className="single-content">청결관리 : {this.state.fieldClean}</div>
+                            <div className="modal-title">{this.state.currentName}</div>
+                            <div className="single-content">장소분류 : {this.state.placeInfo[this.state.currentName]['classify']}</div>
+                            <div className="single-content">현재인원 : {this.state.placeInfo[this.state.currentName]['maxpeople']}</div>
+                            
                             <div className="single-content">시간관리 : <input type="time"></input></div>
-                            <div className="single-content">기온 : {this.state.fieldTemperature}℃</div>
                         </div>
 
                         <span className="close" onClick={() => this.setState({isDetailedOpen: false})}>&times;</span>
