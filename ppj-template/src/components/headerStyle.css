@@ -8,25 +8,27 @@
 	display: flex;
 	justify-content: flex-end;
 }
-
-.customerMain-header span{
+.logoTitle > span{
+	border-bottom: 3px solid black;
+}
+.customerMain-header > span{
 	font-size: 3vh;
 	padding: 0 0.4vw;
 	flex: 0.5;
 }
-.customerMain-header span:nth-child(1){
+.customerMain-header > span:nth-child(1){
 	font-weight: 700;
 	text-align: center;
 	flex: 5;
 }
-.customerMain-header span:nth-child(2){
+.customerMain-header > span:nth-child(2){
 	flex: 20;
 }
-.customerMain-header span:nth-child(5){
+.customerMain-header > span:nth-child(5){
 	flex: 1.5;
 	text-align: center;
 }
-.customerMain-header ul{
+.customerMain-header > ul{
 	border: 1px solid rgba(0, 0, 0, 0.3);
 	display: none;
 	position: fixed;
@@ -41,4 +43,9 @@
 }
 .customerMain-header ul > li:hover{
 	background-color: rgba(0, 0, 0, 0.05)
+}
+.fa-heart::before{
+	-webkit-text-stroke: 1px rgba(0, 0, 0, 0.3); 
+	text-stroke: 0.7px rgba(0, 0, 0, 0.3);
+	color: rgb(250,78,78);
 }

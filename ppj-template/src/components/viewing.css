@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 ul{
     list-style: none;
 }
 body{
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 a{
     text-decoration: none;
@@ -77,17 +77,22 @@ a{
     display: grid;
     grid-column-gap: 5vh;
     grid-row-gap: 10vh;
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr))
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr))
 }
 .viewing-content-card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 250px;
-    border-radius: 10%;
+    border-radius: 5%;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.05);
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3)
+    box-shadow: 0 6px 12px 0 rgba(21,19,19,.1);
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    user-select:none;
 }
 .viewing-content-card:hover{
     background-color: rgba(0, 0, 0, 0.1);
@@ -146,6 +151,11 @@ a{
     font-size: 2vh;
     display: flex;
     justify-content: space-between;
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    user-select:none;
 }
 .viewing-reservation-tab:hover{
     background-color: rgba(0, 0, 0, 0.1);

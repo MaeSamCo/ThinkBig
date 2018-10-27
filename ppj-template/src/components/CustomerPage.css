@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Sunflower:500');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 body{
-	font-family: 'Sunflower';
+	font-family: 'Noto Sans KR', sans-serif;
 }
 a{
 	text-decoration: none;

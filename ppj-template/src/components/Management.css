@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
 body{
-    font-family: '나눔고딕';
+    font-family: 'Noto Sans KR', sans-serif;
 }
 input{
     border: 0;
@@ -30,7 +31,7 @@ input:focus{
 .manage-location-header {
     font-size: 20px;
     font-weight: bold;
-    margin: 10px;
+    margin: 15px;
     padding:5px;
     border-bottom: 2px solid #EFEFEF;
 }
@@ -46,7 +47,7 @@ input:focus{
 }
 
 .location-element {
-    margin: 10px;
+    margin: 15px;
     border-bottom: 1px solid #DFDFDF;
     padding: 20px;
 }
