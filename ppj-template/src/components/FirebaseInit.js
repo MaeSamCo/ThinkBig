@@ -22,9 +22,13 @@ export const getFireDB = (path) => {
   return firebase.database().ref(path)
 }
 
-export function putFireDB(path,name,email) {
+export function putFireDB(path,name,c,mp,dc,rt,lo) {
   return firebase.database().ref(path).set({
     username: name,
-    email: email,
+    classify: c,
+    maxpeople: mp,
+    description: dc,
+    recommendtime: rt,
+    location: lo
   });
 }

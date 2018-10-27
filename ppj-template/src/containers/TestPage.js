@@ -11,10 +11,13 @@ class TestPage extends Component {
 
   save(){
     
-    const userId=document.getElementById("ID").value
     const name=document.getElementById("name").value
-    const email=document.getElementById("email").value
-    putFireDB('Users/'+userId, name, email)
+    const _class=document.getElementById("_class").value
+    const maxpeople=document.getElementById("maxpeople").value
+    const description=document.getElementById("description").value
+    const recommendtime=document.getElementById("recommendtime").value
+    const location=document.getElementById("location").value
+    putFireDB('place/'+name, name, _class, maxpeople, description, recommendtime, location)
     console.log('save')
   }
     render() {
@@ -23,9 +26,12 @@ class TestPage extends Component {
                 <h1>
                     {this.props.state.wow}
                 </h1>
-                    ID:<input id='ID' type="text"/><br/>
-                    name:<input id='name' type="text"/><br/>
-                    email:<input id='email' type="text"/><br/>
+                    장소명:<input id='name' type="text"/><br/>
+                    분류:<input id='_class' type="text"/><br/>
+                    최대인원:<input id='maxpeople' type="text"/><br/>
+                    설명:<input id='description' type="text"/><br/>
+                    권장시간:<input id='recommendtime' type="text"/><br/>
+                    위치:<input id='location' type="text"/><br/>
                     <div className='submit' onClick={this.save}>submit</div>
                     {/* {writeUserData(userId,name,email)} */}
             </div>
